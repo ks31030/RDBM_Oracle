@@ -10,3 +10,5 @@ salary NUMBER(10,2)
 
 INSERT INTO "user" (user_id, name, age, email, hire_date, salary)
 VALUES (2, 'Jane', 25, 'jane@ja.com', TO_DATE('2023-09-25', 'YYYY-MM-DD'), 6000.25);
+
+SELECT * FROM "user" WHERE age >= 30;
