@@ -81,3 +81,14 @@ COMMENT ON COLUMN orders.menu_id IS '주문한 메뉴 항목의 ID';
 COMMENT ON COLUMN orders.order_date IS '주문이 발생한 날짜와 시간';
 COMMENT ON COLUMN orders.quantity IS '주문한 메뉴 항목의 수량';
 COMMENT ON COLUMN orders.total_price IS '주문에 대한 총 금액';
+
+DROP : 데이터베이스에서 객체(테이블, 뷰, 인덱스, 사용자 등)를 삭제하는 데 사용되는 SQL 명령어. 영구삭제.
+    DROP TABLE 테이블이름;
+    DROP VIEW 뷰이름;
+    DROP INDEX 인덱스이름;
+    DROP USER 사용자이름;
+
+CASCADE : 해당 명령이 연결된 객체 또는 데이터 영향 주는 방식 지정.
+        주로 삭제 명령으로 사용.
+        삭제 명령이 관련된 모든 객체나 데이터를 삭제.
+        DROP TABLE 부모테이블 CASCADE CONSTRAINTS;
