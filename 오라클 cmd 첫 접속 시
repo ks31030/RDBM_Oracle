@@ -1,0 +1,13 @@
+sqlplus sys/oracle sysdba
+> sql 초기 로그인 문장
+ALTER SESSION SET"_ORACLE_SCRIPT" = TRUE;
+> Oracle DataBase에서 "_ORACLE_SCRIPT"  모드 활성화
+> 오라클에 스크립트를 작성할 수 있도록 세션을 false에서 true로 변경하는 문장.
+CREATE USER x IDENTIFIED BY y;
+> 유저 아이디와 비밀번호를 생성하는 문장
+GRANT CREATE SESSION TO x;
+> 생성한 유저에게 세션 생성 권한을 부여하는 문장
+GRANT CREATE ANY TABLE TO x;
+> 생성한 유저가 어떠한 테이블을 만들도록 허가하는 문장.
+grant connect, resource, dba to x;
+> 유저가 DB에 연결하는 데에 필요한 권한 + 테이블, 시퀀스 등의 리소스를 생성할 수 있는 권한 + DB 최고 관리자 권한 부여
