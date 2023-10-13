@@ -15,7 +15,7 @@ BEGIN : PL/SQL 실행 부분을 시작.
   BEGIN
     id := 1;(아이디에 변수 할당)
   --SQL 문장을 실행하여 하고 싶은 행위 진행
-  SELECT*FROM 테이블;
+  SELECT * FROM 테이블;
 
   EXCEPTION(예외처리 구문 넣기)
     WHEN 없는데이터를찾을때 THEN
